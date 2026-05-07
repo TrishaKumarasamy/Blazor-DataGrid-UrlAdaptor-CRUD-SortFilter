@@ -1,27 +1,45 @@
-# Blazor Server DataGrid - URLAdaptor with CRUD Operations
+# Blazor Server DataGrid — URL Adaptor with CRUD Operations
 
 This example shows that how to bind local data and perform CRUD operations at server by using URLAdaptor.
 
-In this demo, DataGrid is bound using URLAdaptor. CRUD operation along with data operations like filtering, sorting will be performed in server side. We have used API Contoller's post method to handle multiple post request for CRUD opertion.  
+In this demo, [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) is bound using URLAdaptor. CRUD operation along with data operations like filtering, sorting will be performed in server side. We have used API Contoller's post method to handle multiple post request for CRUD opertion.
+
+## Features
+
+- **Server-side data operations**: Sorting, Filtering, Paging, Counts
+- **CRUD operations**: Add, Edit, Delete using toolbar actions
+- **Integation**: URL Adaptor integration via `SfDataManager`
 
 ## Prerequisites
 
-* Visual Studio 2022 or later
-* Visual Studio Code
+* [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) or later
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [.NET SDK 7.0](https://dotnet.microsoft.com/download/dotnet/7.0)
 
-## How to run the project
+## Getting Started
 
-1. Clone or download this repository to a location in your system.
-2. Open the solution file using the Visual Studio or Visual Studio code.
-3. Restore the NuGet packages by rebuilding the solution or run `dotnet restore`.
-4. Build the project to ensure there are no compilation errors.
-5. Run the project.
+### Clone the repository
 
-Optional CLI Commands:
+```bash
+git clone https://github.com/SyncfusionExamples/Blazor-DataGrid-UrlAdaptor-CRUD-SortFilter.git
+cd URLAdaptorSample
+```
 
-```powershell
+### Run with Visual Studio
+
+1. Open the solution file using Visual Studio 2022 or later.
+2. Restore the NuGet packages by rebuilding the solution.
+3. Build the project to ensure there are no compilation errors.
+4. Run the project.
+
+### Run with .NET CLI
+
+```bash
+# Restore dependencies
 dotnet restore
-dotnet build
+
+# Run the project
+dotnet run
 ```
 
 ## References
