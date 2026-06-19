@@ -1,0 +1,21 @@
+﻿@page "/"
+
+@using URLAdaptorSample.Data
+
+<SfGrid @ref="@Grid" ID="Grid" AllowPaging="true" TValue="Order" AllowFiltering="true" Toolbar="@(new List<string>() { "Add","Edit","Delete","Update","Cancel"})">
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
+    <Syncfusion.Blazor.Data.SfDataManager Url="/api/Default" InsertUrl="/api/Default/Insert" UpdateUrl="/api/Default/Update" RemoveUrl="/api/Default/Delete" Adaptor="Adaptors.UrlAdaptor"></Syncfusion.Blazor.Data.SfDataManager>
+    <GridFilterSettings Type="FilterType.Menu"></GridFilterSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="@TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" EditType="EditType.NumericEdit" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Hire Date" Type="ColumnType.Date" EditType="EditType.DatePickerEdit" Width="90"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+
+@code{
+    SfGrid<Order> Grid { get; set; }
+}
